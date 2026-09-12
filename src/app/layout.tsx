@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 import {Poppins} from 'next/font/google'
 const inter = Poppins({
-  subsets: ['latin'],weight:['400','500','600']})
+  subsets: ['latin'],weight:['300','400','500','600']})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
