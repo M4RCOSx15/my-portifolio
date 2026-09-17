@@ -33,13 +33,9 @@ body{
     font-size: 60px;
     border-radius: 200px;
 }
-.perfil h1{
-    margin-top: 20px;
+.titulos{
     color: white;
-}
-.perfil h2{
-    margin-top: 10px;
-    color: white;
+     transition: color 0.3s ease;
 }
 .perfil p{
     color: #00ff88;
@@ -100,7 +96,8 @@ body{
 }
 .post-card:hover{
     border-color: #58468c;
-    box-shadow: 0 0 12px rgba(88, 70, 140, 0.2);
+    box-shadow: 0 0 30px rgba(88, 70, 140, 0.2);
+  
 }
 .conteudo-pag a{
  margin-top: auto;
@@ -114,19 +111,23 @@ body{
     width: 220px;
     height: 140px;
     overflow: hidden;
-     border-radius: 1px;
-     flex-shrink: 0;   
+     border-radius: 8px;
+     flex-shrink: 0;
+     border: 0px solid#292f40;
+     background: #0d0f14;   
     
 }
 .card-image img{
     height:100%;
     width: 100%;
-    object-fit: contain;
-    transform: scale(0.85);
+    object-fit: cover;
+    border-radius: 8px;
+    transform: scale(1);
   transition: transform 0.4s ease;
+  
 }
 .post-card:hover .card-image img{
-    transform: scale(1);
+    transform: scale(1.05);
 }
 
 .conteudo-pag h2{
@@ -135,26 +136,41 @@ body{
     font-size: 20px;
     margin: 12px 0 8px 0;
 }
-.conteudo-pag a{
-    font-size: 12px;
-    font-family:"Fira Code", monospace;
-    font-weight: 700;
-    color:#00ff8895;
-}
+
 
 .conteudo-pag p{
+   
     color: rgb(148, 145, 145);
     font-weight: 100;
     font-family: 'Inter', sans-serif;
     margin-bottom: 20px;
 }
+.conteudo-pag{
+    flex-direction: column;
+   display: flex;
+   height: 100%;
+   flex: 1;
+}
 .conteudo-pag .read-more{
     margin-top: auto;
     color: #00ff88;
+    gap: 6px;
   text-decoration: none;
   font-weight: 700;
+    margin-top: 50px;
   font-size: 13px;
   font-family: "Fira Code", monospace;
+  align-items: center;
+}
+.read-more .flecha{
+   display: inline-block;
+ transition: transform 0.3s ease, color 0.3s ease;
+   
+}
+.read-more:hover .flecha{
+  transform: translateX(6px);
+  color: #00ff2f;
+   
 }
 .header{
    font-family: "Fira Code", monospace;
@@ -169,4 +185,8 @@ body{
   padding: 4px 10px;
   border-radius: 20px;
   border:1px solid #2d3748;
+}
+.perfil:hover .titulos{
+   color: rgba(137, 43, 226, 0.77);
+  
 }
